@@ -103,7 +103,7 @@ analytics:
 author:
   name             : "Yoon Pil-do"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **The BEST**."
+  bio              : "I am **The BEST**."
   location         : "Korea, Daejeon"
   email            : "yoonpd56@gmail.com"
   links:
