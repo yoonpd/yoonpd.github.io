@@ -1,3 +1,13 @@
+---
+title: "Jekyll Github 블로그에 MathJax로 수학식 표시하기"
+tags:
+  - Blog
+  - MathJax
+  - Jekyll
+  - LaTeX
+use_math: true
+---
+
 # Random Variable
 
 > 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
