@@ -1,3 +1,10 @@
+---
+title: "Algorithm Week 2"
+
+categories:
+  - Alogorithm
+---
+
 # 알고리즘 2주차 강의 정리
 
 - **알고리즘이란?**
