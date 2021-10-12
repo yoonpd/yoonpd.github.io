@@ -1,3 +1,10 @@
+---
+title: "Random Variables (6)"
+
+categories:
+  - Probability and Random Variables
+---
+
 # Radnom Variable (6)
 
 ## Derived Distribution: *Y = g(X)*
