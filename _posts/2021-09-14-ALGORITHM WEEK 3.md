@@ -3,6 +3,8 @@ title: "Algoritm Week 3"
 
 categories:
   - Algorithm
+toc: true
+toc_sticky: true
 ---
 
 
@@ -60,7 +62,7 @@ categories:
 
   → 볼드 표시가 된 숫자가 swap 된 숫자
 
-- pseudo code
+- #### pseudo code
 
   ```c
   selectionSort(A[], n)
@@ -105,7 +107,7 @@ categories:
 
   → 계속 진행... <br/>
 
-- pseudo code를 확인해보자
+- #### pseudo code
 
   ```c
   bubbleSort(A[], n)
@@ -154,7 +156,7 @@ categories:
   → 볼드 표시는 정렬이 된 부분 (맨 처음은 정렬 되었다고 가정하는 것) <br/>
   → 붉은 표시는 현재 위치를 찾아 삽입을 진행할 숫자 <br/>
 
-- pseudo code로 확인해보자.
+- #### pseudo code
 
   ```c
   insertionSort(A[], n)

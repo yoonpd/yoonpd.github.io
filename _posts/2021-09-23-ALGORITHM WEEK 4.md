@@ -3,6 +3,8 @@ title: "Algoritm Week 4"
 
 categories:
   - Algorithm
+toc: true
+toc_sticky: true
 ---
 
 
@@ -95,7 +97,7 @@ categories:
   <img width="508" alt="스크린샷 2021-09-23 오전 10 37 26" src="https://user-images.githubusercontent.com/37065429/134447840-adbc2aaf-c964-40ea-a359-941e4b896577.png"> <br/>
   → 그림에도 나와있 듯이, 각각의 정렬 정보를 저장할 '**임시 배열**'이 필요함<br/>
 
-- Pseudo Code
+- ### Pseudo Code
 
   ```c
   mergeSort(A[], p, r)			// A[p...r]을 정렬
@@ -117,7 +119,7 @@ categories:
 
   <br/>
 
-- C code - merge
+- ### C code - merge
 
   ```c
   void merge(int* A, int p, int q, int r){
@@ -176,7 +178,7 @@ categories:
 - 그림으로 작동 원리를 간단히 파악해보자.💩
   <img width="495" alt="스크린샷 2021-09-23 오전 11 25 01" src="https://user-images.githubusercontent.com/37065429/134447883-227dff06-a4b0-46f4-ace2-1e846b169964.png"><br/>
 
-- Pseudo Code
+- ### Pseudo Code
 
   ```c
   quickSort(A[], p, r)

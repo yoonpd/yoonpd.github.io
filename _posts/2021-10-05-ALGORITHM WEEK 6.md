@@ -3,6 +3,8 @@ title: "Algoritm Week 6"
 
 categories:
   - Algorithm
+toc: true
+toc_sticky: true
 ---
 
 

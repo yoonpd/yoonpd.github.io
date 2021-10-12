@@ -3,6 +3,8 @@ title: "Algoritm Week 5"
 
 categories:
   - Algorithm
+toc: true
+toc_sticky: true
 ---
 
 
@@ -60,7 +62,7 @@ categories:
   - A[i]의 오른쪽 자식 = A[2i+1] → Always Odd <br>
     
 
-- **MAX-Heapify**
+- #### **MAX-Heapify**
 
   - 힙이 아닌 완전 이진 트리를 힙으로 만드는 것
 
@@ -69,7 +71,7 @@ categories:
     1. 부모 노드의 값이 자식 노드의 값들보다 작다면 자식 노드 중 큰 값과 부모 노드의 값과 바꾼다.
     2. 이를 루트부터 차례대로 진행을 한다.
 
-  - Pseudo Code
+  - ##### Pseudo Code
 
     ```c
     MAX-HEAPIFY(A, i){
@@ -88,7 +90,7 @@ categories:
 
     → root 노드에 대한 heapify는 MAX-HEAPIFY(1)을 호출하면 된다. <br>
 
-- **Heap Sort**
+- #### **Heap Sort**
 
   - Max-Heapify가 된 트리에서
 
@@ -96,7 +98,7 @@ categories:
     2. Restore the structure to a heap : Re-Heapify
     3. Iterate 1~2 <br>
 
-  - Pseudo code
+  - ##### Pseudo code
 
     ```c
     BUILD-MAX-HEAP(A)

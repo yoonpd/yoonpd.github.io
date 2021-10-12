@@ -3,6 +3,8 @@ title: "Algoritm Week 7"
 
 categories:
   - Algorithm
+toc: true
+toc_sticky: true
 ---
 
 
@@ -11,12 +13,16 @@ categories:
 
 ## Binary Search Tree
 
-- Dynamic Set : Search, Insert, Delete 등의 기능을 제공하는 자료구조
+- ### Dynamic Set 
+  
+  - Search, Insert, Delete 등의 기능을 제공하는 자료구조
   - 배열, 연결리스트, Hash Table 등 선형 구조 이용 <br>
     → Insert, Search, Delete 중 적어도 하나는 O(n)
   - 이진 탐색 트리 : 레드-블랙 트리, AVL-트리 등의 트리 기반 구조 이용
     → Insert, Search, Delete 연산의 시간 복잡도 O(h), h = log n <br>
-- 이진 검색 트리
+  
+- ### 이진 검색 트리
+  
   - 검색 트리 중 하나 - 자료의 검색을 빠르게 하기 위함
   - 이진 트리의 구조 → <span style="color:red">**완전 이진 트리는 아님!**</span>
   - 각 노드에 하나의 KEY를 저장
@@ -40,7 +46,7 @@ categories:
 - SUCCESSOR(13) : 15 (lowest ancestor whose left child is also an ancestor) <br>
   → 오른 쪽 부트리가 없을 때, 조상을 타고 쭉 올라가다가 처음으로 오른쪽으로 갈 수 있는 길이 나올 때
 
-1. SEARCH
+1. ### SEARCH
 
    ```c
    TREE-SEARCH(x, k)
@@ -59,7 +65,7 @@ categories:
        return x
    ```
 
-2. Minimum And Maximum
+2. ### Minimum And Maximum
 
    ```c
    TREE-MINIMUM(x)
@@ -73,7 +79,7 @@ categories:
      return x
    ```
 
-3. Successor
+3. ### Successor
 
    - Successor y of a node x : key[x]보다 크면서 가장 작은 key를 가진 노드 <br>
      → Inorder tree walk를 통해 찾는 방법 <br>
@@ -103,7 +109,7 @@ categories:
 
 ## Insertion & Deletion
 
-- Tree INSERT
+- ### Tree INSERT
 
   ```c
   TREE-INSERT(T, z)  // T에 z 노드 삽입
@@ -124,7 +130,7 @@ categories:
 
   <br>
 
-- DELETION
+- ### DELETION
 
   - 노드 z의 자식 노드가 없는 경우 <br>
     → 삭제 / 부모 노드의 자식 노드를 NIL로 수정
