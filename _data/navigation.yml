@@ -1,7 +1,9 @@
 # main links
 main:
-  - title: "Quick-Start Guide"
-    url: https://mmistakes.github.io/minimal-mistakes/docs/quick-start-guide/
+  - title: "Probability and RVs"
+    url: https://yoonpd.github.io/categories/#probability-and-random-variables
+  - title: "Algoritm"
+    url: https://yoonpd.github.io/categories/#alogorithm
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
