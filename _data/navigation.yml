@@ -4,6 +4,8 @@ main:
     url: https://yoonpd.github.io/categories/
   - title: "Algorithm"
     url: /categories/Algorithm/
+  - title: "Probability and RVs"
+    url: /categories/Probability and RVs/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
