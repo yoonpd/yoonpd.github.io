@@ -1,3 +1,10 @@
+---
+title: "Random Variables (4)"
+
+categories:
+  - Probability and Random Variables
+---
+
 # Random Variables (4)
 
 ## Continuous Random Variable and PDF (Probability Density Function)

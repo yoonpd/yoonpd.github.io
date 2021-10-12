@@ -1,4 +1,11 @@
-Random Variables (4)
+---
+title: "Random Variables (5)"
+
+categories:
+  - Probability and Random Variables
+---
+
+# Random Variables (5)
 
 ## Gaussian (Normal) RVs
 

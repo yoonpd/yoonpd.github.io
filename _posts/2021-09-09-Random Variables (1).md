@@ -1,4 +1,11 @@
-# Random Variable (1)
+---
+title: "Random Variables (1)"
+
+categories:
+  - Probability and Random Variables
+---
+
+# **Random** Variable (1)
 
 > 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
 
@@ -19,8 +26,12 @@
   → 물론, 동일한 sample space에서 다른 random variable(X)를 만들 수 있다. <br/>
   → For a fixed value x, we can associate an event that a random variable X has the value x, i.e., {w ∈ Ω &#124; X(w) = x} <br/><img width="364" alt="스크린샷 2021-09-09 오후 3 33 32" src="https://user-images.githubusercontent.com/37065429/133015050-b5234dbd-9a79-4262-9b5e-efca2995f914.png"><br/>
 
-  → For a discrete random variable X, we call px(x) <span style="color:red">**probability mass function (PMF)**</span>
+  → For a discrete random variable X, we call px(x) <span style="color:red">**probability mass function (PMF)**</span> <br/>
 
+  → PMF는 이산 확률 변수에서 특정 값에 대한 확률을 나타내는 함수이다! <br/>
+  
+  
+  
 - 그러면, notation에 대한 예제를 살펴보자!
 
   - 주사위를 굴렸을 때, sample space Ω = {1,2,3,4,5,6}이다.
@@ -42,10 +53,16 @@
   - A1 = { X = 1 }이 A1 = {w ∈ Ω &#124; X(w) = 1} 이렇게 표현됨 또한 알아야 한다.
 
   - 그리고 random variable X는 함수이다.  <span style="color:blue">which maps from Ω to R</span> <br/>
+  
+    |                              X                               |          x           |             P(X=x)              |
+    | :----------------------------------------------------------: | :------------------: | :-----------------------------: |
+    | 확률 변수 X<br />Sample space 내에 있는 각 원소에<br /> 하나의 실수값을 대응시키는 함수 | X가 할당하는 실수 값 | 실수 값이 나올 확률 값<br />PMF |
+  
+    
 
 ## Popular discrete random variables
 
-- Only <span style="color:red">**binary**</span> values. <br/>
+- **Only <span style="color:red">binary</span> values.** <br/>
   → p ∈ [0, 1] <br/>
 
   > X = 0, w.p. 1-p,
@@ -58,7 +75,7 @@
     → success/failure, head/tail
   - Very useful for an indicator rv(random variable) of a event A.<br/>
 
-- Uniform X with paramete a, b (integer a,b, where a <= b)
+- **Uniform X with paramete a, b (integer a,b, where a <= b)**
 
   - 그렇다면, Ω = {a, a+1, ..., b}가 될 것이고, 여기서 uniformly at random하게 숫자를 뽑는다고 해보자.
 

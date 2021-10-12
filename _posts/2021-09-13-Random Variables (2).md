@@ -1,3 +1,10 @@
+---
+title: "Random Variables (2)"
+
+categories:
+  - Probability and Random Variables
+---
+
 # Random Variable (2)
 
 > 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.

@@ -1,3 +1,10 @@
+---
+title: "Conditioning and Independence"
+
+categories:
+  - Probability and Random Variables
+---
+
 # Conditioning and Independence
 
 > 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
@@ -31,7 +38,7 @@
             → **P(A ∩ B)와 P(C ∩ B) 또한 disjoint**
             → Finite는 countable로 확장할 수 있으니 생략
        3. Normalization : P( Ω &#124; B ) = **P(Ω ∩ B) / P(B)** = P(B) / P(B) = 1
-          <br>
+          <br/>
 
 ## Bayes' Rule and Bayesian Inference
 
