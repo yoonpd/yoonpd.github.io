@@ -1,3 +1,10 @@
+---
+title: "Probabilistic Model"
+
+categories:
+  - Probability And Random Variables
+---
+
 # 1. Probabilistic Model
 
 
