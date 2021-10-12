@@ -5,7 +5,7 @@ main:
   - title: "Algorithm"
     url: /categories/Algorithm/
   - title: "Probability and RVs"
-    url: /categories/Probability and RVs/
+    url: /categories/Probability and Random Variables/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
