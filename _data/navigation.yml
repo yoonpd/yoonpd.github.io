@@ -1,9 +1,7 @@
 # main links
 main:
-  - title: "Probability and RVs"
-    url: https://yoonpd.github.io/categories/#probability-and-random-variables
-  - title: "Algoritm"
-    url: https://yoonpd.github.io/categories/#alogorithm
+  - title: "Categories"
+    url: https://yoonpd.github.io/categories/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
