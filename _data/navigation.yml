@@ -2,6 +2,8 @@
 main:
   - title: "Categories"
     url: https://yoonpd.github.io/categories/
+  - title: "Algorithm"
+    url: /categories/Algorithm/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
