@@ -3,6 +3,9 @@ title: "Probabilistic Model"
 
 categories:
   - Probability And Random Variables
+tags:
+  - tag
+  - 
 ---
 
 # 1. Probabilistic Model
