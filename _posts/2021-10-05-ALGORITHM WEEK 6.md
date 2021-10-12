@@ -1,3 +1,12 @@
+---
+title: "Algoritm Week 6"
+
+categories:
+  - Algorithm
+---
+
+
+
 # 알고리즘 6주차 정리
 
 ## Binary Tree Traversal

@@ -1,8 +1,8 @@
 ---
-title: "Algorithm Week 2"
+title: "Algoritm Week 2"
 
 categories:
-  - Alogorithm
+  - Algorithm
 ---
 
 # 알고리즘 2주차 강의 정리

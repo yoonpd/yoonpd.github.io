@@ -1,3 +1,12 @@
+---
+title: "Algoritm Week 7"
+
+categories:
+  - Algorithm
+---
+
+
+
 # 알고리즘 7주차 정리
 
 ## Binary Search Tree

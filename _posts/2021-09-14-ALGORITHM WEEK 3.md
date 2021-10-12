@@ -1,3 +1,12 @@
+---
+title: "Algoritm Week 3"
+
+categories:
+  - Algorithm
+---
+
+
+
 # Algorithm week 3
 
 ## 기초 정렬 알고리즘
