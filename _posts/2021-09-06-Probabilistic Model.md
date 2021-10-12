@@ -2,10 +2,7 @@
 title: "Probabilistic Model"
 
 categories:
-  - Probability And Random Variables
-tags:
-  - tag
-  - 
+  - Probability and Random Variables
 ---
 
 # 1. Probabilistic Model
