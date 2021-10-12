@@ -4,7 +4,7 @@ main:
     url: https://yoonpd.github.io/categories/
   - title: "Algorithm"
     url: /categories/Algorithm/
-  - title: "Probability and RVs"
+  - title: "Probability and Random Variables"
     url: /categories/Probability and Random Variables/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
