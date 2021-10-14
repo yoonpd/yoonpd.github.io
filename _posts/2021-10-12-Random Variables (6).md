@@ -3,6 +3,8 @@ title: "Random Variables (6)"
 
 categories:
   - Probability and Random Variables
+toc: true
+toc_sticky: true
 ---
 
 # Radnom Variable (6)
