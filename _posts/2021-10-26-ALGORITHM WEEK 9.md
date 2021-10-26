@@ -129,7 +129,7 @@ BFS(G, s){
 
 <br>
 
-### 깊이 우선 순회 (DFS)
+### - 깊이 우선 순회 (DFS)
 
 - 개념적 이해
   1. 출발점 s에서 시작
@@ -158,3 +158,38 @@ aDFS(v){
 }
 ```
 
+<br>
+
+
+
+## Queue
+
+### - 개념
+
+- 컴퓨터의 기본적인 자료구조의 한가지로, 먼저 집어 넣는 데이터가 먼저 나오는 FIFO 형태의 자료구조
+- Put, Insert, Enqueue
+- Get, Delete, Dequeue
+- Front, Rear
+- Overflow, Underflow
+- Linear Queue, Circular Queue, Linked Queue ... <br>
+  
+
+### - Implementation Methodology
+
+1. **Linear Queue**
+
+   - 흔히 알고 있는 큐의 모습
+
+   - front와 rear 변수를 사용해서 ENQ, DEQ 연산을 수행하게 됨 <br>
+
+     → 비어 있을 때, front와 rear는 0<br>→ DEQ 시, front 하나 상승 <br>
+     → ENQ 시, rear 하나 상승
+
+   - rear가 size에 다달았을 때, FULL임을 나타내지만, front가 1이 아닐 수도 있음
+     → 이 문제를 해결하기 위해 Circular Queue 등장<br>
+
+2. **Circular Queue**
+
+   - 값을 삽입할 때, 비어있는 공간도 채울 수 있도록 mod 연산을 적용 → 순환식 <br>
+
+3. **Linked Queue**
