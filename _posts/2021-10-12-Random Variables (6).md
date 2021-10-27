@@ -3,8 +3,6 @@ title: "Random Variables (6)"
 
 categories:
   - Probability and Random Variables
-toc: true
-toc_sticky: true
 ---
 
 # Radnom Variable (6)
@@ -223,7 +221,45 @@ toc_sticky: true
 
 
 
+<br>
 
+## Correlation Coefficient
 
+- 앞서 배운 Covariance와 비슷한 내용이다. 그럼 무엇이 다를까?
 
+- [Covariance를 만들기 위한 우리들의 요구사항](#making-a-metric-of-dependence-degree)#Making a Metric of Dependence Degree 을 보면 어디서 다른지 알 수 있다. <br>
+
+  → R1과 R2는 이미 만족을 하고 있다. <br>
+  → R3....이게 문제인데 어떻게 만족해야할까?
+
+### Bounding the metric : Correlation Coefficient
+
+- Normalization을 한다면 어떻게 펼쳐져있든, 일정 범위로 맞춰줄 수 있다.
+
+- 그럼 무엇을 기준으로 해야할까?<br>
+
+  ![스크린샷 2021-10-27 오전 9 56 29](https://user-images.githubusercontent.com/37065429/138983213-0e93eaf2-f2c2-4c25-8046-3cec22536928.png)<br>→ σ로 하면 된다.<br>
+  → 만약, 분자가 제곱의 형태를 갖는다면 → var로 하면 된다.
+
+- 식을 보자.<br>
+
+  ![스크린샷 2021-10-27 오전 9 56 48](https://user-images.githubusercontent.com/37065429/138983223-8aed97a8-f5ec-4538-83bb-f987b9770e89.png)<br>
+  <br>
+
+### Theorem. 
+
+- 그럼, coef가 의미하는 것은 무엇일까?
+  1. **-1 <= ρ <= 1**
+  2. **&#124; ρ &#124; = 1 ⇔ X - μX = c(Y - μY)** for some constant c (c > 0 when ρ = 1 and c < 0 when ρ = -1) <br>
+     → In other words, <span style="color:red">**Linear relation meaning VERY RELATED.**</span><br>
+
+### Proof. 1
+
+![스크린샷 2021-10-27 오전 10 08 30](https://user-images.githubusercontent.com/37065429/138983237-0e94773e-172d-4e68-93c6-35a32551a564.png)
+
+<br>
+
+### Proof. 2
+
+![스크린샷 2021-10-27 오전 10 09 15](https://user-images.githubusercontent.com/37065429/138983252-48cd8136-8d8c-4300-93de-aff9ce1d21c4.png)<br>
 
