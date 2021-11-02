@@ -65,8 +65,8 @@ Kruskal(G, r)
 ```
 
 1. T는 신장 트리를 의미
-2.  A, B, C, D 노드로 구성된 트리일 경우 {{A}, {B}, {C}, {D}}로 바꿈 <br>
-   → 나중에, A와 B가 연결되면 {{A, B}, C, D}가 됨 <br>
+2.  A, B, C, D 노드로 구성된 트리일 경우 A, B, C, D로 바꿈 <br>
+   → 나중에, A와 B가 연결되면 (A, B), C, D가 됨 <br>
    → A와 B를 Connected Component라고 함
    <br>
 
