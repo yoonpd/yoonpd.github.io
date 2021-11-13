@@ -112,9 +112,93 @@ toc_sticky: true
   ![스크린샷 2021-11-11 오후 5 49 14](https://user-images.githubusercontent.com/37065429/141268211-e3ba1afc-3858-4b65-85c0-c5cad421561b.png)
 
 - WLLN에서 풀었던 두번째 질문에 대해 CLT를 사용해서 답을 도출해보자. <br>
-  ![스크린샷 2021-11-11 오후 5 50 12](https://user-images.githubusercontent.com/37065429/141268231-dd975dc3-1022-437d-8458-6b86ab442001.png)
 
-- 확실히 다른 값이다. CLT가 
+<br>
 
+<br>
 
+## Central Limit Theorem: Proof
 
+### Moment Generating Function (MGF)
+
+- CLT에 대한 증명을 하기 전에 MGF라는 것을 알고 가보자
+- 간단하게 <span style="color:red">Moment Generating Function</span>은 s라는 파라미터를 갖는 X에 대한 함수이다. <br>
+  → The <span style="color:red">Moment Generating Function</span> Mx(s) of a rv X is a function of a scaler parameter s
+- 수식으로는 다음과 같이 표현된다. <br>
+  ![스크린샷 2021-11-13 오후 1 01 48](https://user-images.githubusercontent.com/37065429/141607748-0fb44cd5-0b75-43f2-a996-53d2fa867c34.png)
+- 정리할 때는 편하게 M(s)라고 적겠다.
+
+<br>
+
+#### Examles
+
+- 몇 가지의 예제를 통해 MGF를 만드는 법을 확인해보자.
+  1. Discrete<br>
+     ![스크린샷 2021-11-13 오후 1 08 25](https://user-images.githubusercontent.com/37065429/141607774-2e8eed52-a677-4077-ac49-adcfcdb4dac5.png)
+  2. Continuous<br>
+     ![스크린샷 2021-11-13 오후 1 08 48](https://user-images.githubusercontent.com/37065429/141607775-ddc88b69-9b4d-47e5-8dc9-657fc566606f.png)
+  3. Linear RVs<br>![스크린샷 2021-11-13 오후 1 09 02](https://user-images.githubusercontent.com/37065429/141607776-55e3df9c-23df-4916-bf84-97da56eb290a.png)
+     <br>
+     → MY와 MX간의 관계를 표현하는 식으로도 해석이 가능하다.
+  4. Standard Noraml RV<br>
+     <img width="361" alt="스크린샷 2021-11-13 오후 1 11 14" src="https://user-images.githubusercontent.com/37065429/141607777-d3dc7e55-6ca3-4773-bb5d-1362bb6e48b6.png">
+
+<br>
+
+<br>
+
+### Useful Properties of MGF
+
+![스크린샷 2021-11-13 오후 1 19 35](https://user-images.githubusercontent.com/37065429/141607780-85de0925-26d8-4b7e-8d0d-805a566406f0.png)
+
+<br><br>
+
+#### Example
+
+- 앞서 설명한 속성이 어떻게 활용되는지 간단한 Exp RV를 통해 이해해보자.<br>![스크린샷 2021-11-13 오후 1 22 05](https://user-images.githubusercontent.com/37065429/141607781-908e1e48-c80c-49dd-883b-518e3a0c4412.png)
+  <br>
+  <br>
+
+### Inversion Property
+
+- MGF에는 또 다른 중요한 특성이 있다.<br>
+  ![스크린샷 2021-11-13 오후 1 24 43](https://user-images.githubusercontent.com/37065429/141607782-8bf0682e-2862-430d-a680-a2fd6b8d5b90.png)
+- 이게 무슨 말일까?<br>
+  → 간단히 말하자면, MGF와 X는 <span style="color:red">일대일 관계</span>이고, 만약 우리가 MGF를 안다면 distribution을 <span style="color:red">recover</span> 할 수 있다는 것이다.
+- 어떨 떄는 복구하는 것이 어려울 수도 있고, 쉬울 수도 있다.
+- 쉬운 예제와 어려운 예제를 하나씩 살펴보자.
+
+<br>
+
+#### Example 1.
+
+![스크린샷 2021-11-13 오후 1 28 48](https://user-images.githubusercontent.com/37065429/141607784-a42fb99e-d87f-4daa-ad36-bc39acfe3615.png)<br>
+
+→ 쉽다 쉬워~~~ 이제 어려운거 해보자.<br>
+
+#### Example 2.
+
+![스크린샷 2021-11-13 오후 1 29 32](https://user-images.githubusercontent.com/37065429/141607786-e674cfb3-ca80-4489-8cfb-70292004426c.png)<br>
+→ 식을 전개하면서 사용한 방법은 1 + a + a^2 + ... = 1/(1-a) (when abs(a) < 1)
+
+<br>
+
+<br>
+
+### Back to CLT Proof
+
+- Without loss of generality, assume E(Xi) = 0 and var(Xi) = 1.
+- 그러면 Zn은 다음과 같이 정의가 될 것이다.<br>
+  ![스크린샷 2021-11-13 오후 1 45 02](https://user-images.githubusercontent.com/37065429/141607787-2faff9dd-5481-4593-a2ce-0dbfe80fb695.png)
+- 먼저, Zn의 MGF를 구해보자. (이는 Standard Normal Distribution이 될 것이다.)<br>
+  ![스크린샷 2021-11-13 오후 1 46 12](https://user-images.githubusercontent.com/37065429/141607788-7f6d5c9a-d728-4976-8f27-1f7b6a28f4ac.png)
+- 간단하게 수식을 전개하기 위해 M = M_X1이라고 하자.
+- 그럼 우리가 배웠던 MGF의 첫번째 속성에 의해 다음을 알 수 있다. <br>
+  → M(0) = 1, M'(0) = 0, M''(0) = 1
+- 그리고 우리가 CLT의 증명을 위해 원하는 것은 다음이다. <br>
+  → ![스크린샷 2021-11-13 오후 1 47 55](https://user-images.githubusercontent.com/37065429/141607789-83393f57-d7c8-497c-a6e5-8ce88eef873a.png)<br>
+  → 증명을 위해 log도 취하겠다. (으 취한다)
+- 그리고 더 편리함을 위해 y = 1/sqrt(n)이라고 하면 <br>![스크린샷 2021-11-13 오후 1 48 42](https://user-images.githubusercontent.com/37065429/141607790-f3e76420-c8f6-4452-b236-2cabcd4011c0.png)
+  <br>
+  → 분모가 0으로 수렴하니까, 로피탈 룰을 2번 적용하자.
+- <img width="588" alt="스크린샷 2021-11-13 오후 1 52 39" src="https://user-images.githubusercontent.com/37065429/141607791-e3596f54-7764-4d9d-a664-aa1926223001.png">
