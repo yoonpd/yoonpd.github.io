@@ -113,7 +113,115 @@ toc_sticky: true
 
 #### Number of arrivals and Time until the first arrival
 
+- T라는 값이 # of slots until the first arrival이라고 해보자.
+- 그러면 T는 RV를 의미하게 되고, 만약 (X, X, X, X, X, O)라고 하면 T는 6이라는 값을 가질 것이다.
+- 이러한 T는 또한 Geometric Random variable이다.<br>![image](https://user-images.githubusercontent.com/37065429/142355639-5cde1b19-1636-4ec5-8222-4beaf118e5db.png)
+- Geom RV는 <span style="color:blue">memoryless</span>라는 속성도 갖고 있다.
+
+<br>
+
+#### Memoryless and Fresh-start after Deterministic time n
+
+- 앞선 예제를 한(세) 마디로 표현하면 다음과 같다. <br>→ Independence across slots
+- 어? 그럼 어떤 프로세스가 진행되다가 그 중간에 들여다보면 어떻게 보일까?
+- 이것에 대한 질문을 여러가지 해보자.
+  1. U = X1 + X2 ㅛ V = X5 + X6?<br>
+     → 매우 직관적으로 그렇다고 할 수 있다. <br>
+     → Because Xi s are independent.<br>
+  2. <span style="color:red">After</span> time n = 6, I start to <span style="color:red">look</span> at the process Xn (n=6 ~ INF) <br>
+     → (X1, X2, ... , X5) ㅛ (X6, ... XINF) <br>
+     → 즉, 우리는 이전 것과 상관없이 '우리의 입장'에서는 <span style="color:red">fresh-start</span>와 같이 보일 것이다. <br>
+     → If you watch <span style="color:blue">the on-going</span> Bern process(p) <span style="color:blue">from some time n</span>, you still see <span style="color:blue">the same Bern process(p).</span><br><br>
+
+#### Fresh-start after Random time N
+
+- 더 빡센 질문이다.
+- 우리가 언제 들여다 봐도 동일한 Bern process(p)를 볼 수 있다는 것은 위에서 알 수 있었다.
+- 근데,,,,,,,시간이 random이라면?? 즉, '언제 들여다 본다' 자체가 random variable이라면 어찌될까
+- 예제를 통해 어떤 의문인가를 확인해보자.<br>![image](https://user-images.githubusercontent.com/37065429/142356889-cecc9361-1730-4eb9-8e31-748e46ffd419.png)<br>*→ 누군가가 process를 지켜보다 조건이 충족되었을 때, 나를 불러 확인하도록 하는 예제이다.*
+  1.  Time of 3rd arrival에 해당하는 N은 7, 그 이후는 Bern process이다.<br>→ 이전에 3개가 도착한 것은 <span style="color:red">이미 확정</span>되어 있다.
+  2.  (1)과 동일하다.
+  3.  이건 어렵다........ 결론을 말하자면 일단 답할 수 없고, n에서 본 순간 '111'이 나와야 하므로 '111'자체는 random이 될 수 없다.<br>
+     → 즉, 111이 나왔다 해도 n 이후의 process는 Bern process가 아니다. <br>→ 추가로, 이를 알기 위해 <span style="color:red">future knowledge</span>가 필요하다.<br><br>
+
+#### Stopping time
+
+- Stopping time이라는 말의 정의를 앞서 설명한 예제를 통해 설명할 수 있다.
+- In probability theory, a random time N is said to be a <span style="color:orange">stopping time</span>, if the question of "N=n?" <span style="color:orange">can be answered only from the present and the past knowledge</span> of X1, X2, ... Xn.
+- 따라서, N 이후에 fresh-start라면, N은 stopping time이라고 할 수 있다.
+- 앞선 예제에서, E1과 E2는 stopping time이다.
+
+<br>
 
 
 
+#### Distribution of Busy Periods (1)
+
+- 예제를 하나 생각해보자.
+- 어떤 서버가 있고, 요청이 들어왔을 때 busy(B), 아닐 때를 idle(I)라고 해보자.
+- 여기서, First busy period B1을 다음과 같이 정의해보자. <br>
+  → Starts with the first busy slot and ends just before the first subsequent idle slot
+- 무수히 많은 B1들이 있을텐데 두 개를 대표적으로 확인해보자.<br>![image](https://user-images.githubusercontent.com/37065429/142364214-83b06658-9576-4564-892a-f25d9bed6d8e.png)
+  1. B1 = 3
+  2. B2 = 4
+- 이런식으로 확인을 할 수 있고, 일반화해서 생각해본다면,
+  1. Busy Period가 바로 시작
+  2. Idle이 지속되다가 Busy Period가 시작
+- 첫번째는 우리가 어디서 많이 본 RV로 치환할 수 있다.<br>
+  → <span style="color:red">Geometric Random Variable</span>
+- 두번째는? **Fresh-start**를 생각하자! <br>
+  → N이라는 새로운 RV가 <span style="color:orange">time of the first busy slot</span>이라고 한다면, N은 <span style="color:orange">stopping time</span>이다.<br>
+  → 왜냐? N 이후에는 Bern process를 fresh-start할 수 있기 때문이다! <br>
+  → 그러면, 그 이후는 <span style="color:red">Geometric Random Variable</span>이다.
+- 따라서, B1 is geometric with parameter <span style="color:orange">(1-p)</span> <br>
+  → p : idle
+
+<br><br>
+
+#### Distribution of Busy Periods (2)
+
+- (1)과 똑같다. 하지만 두 번째 periods를 알고 싶다!!! (B2)
+- 여기서 <span style="color:red">fresh-start</span>의 힘을 알 수 있다.<br>
+  → N : time of the first busy slot of the second busy period <br>
+  → then, Is N a stopping time? → <span style="color:red">YES!</span>
+- 그럼 B2 are <span style="color:blue">identically distributed</span> as <span style="color:red">Geom(1-p)</span>.
+- 이는 B3, B4,...에도 동일하게 적용할 수 있다. <br>
+  → 이것이 <span style="color:red">fresh-start의 힘이다.</span><br>
+
+<br>
+
+#### Time of k-th arrival
+
+- 이제 더 확장해서 생각해보자.
+- Time of the first arrival을 Y1이라 하면, Y1 ~ Geom(p)일 것이다.
+- 그러면!! Time of the k-th arrival은 어떻게 될까? 즉, Yk는 어떻게 될까?
+- 먼저, 두 Yi, Yi+1의 interval time을 구하고 이 모든 것을 합하면 결국 Yk가 나올 것이다. <br>
+  → 이렇게 한 이유는, Yi는 i번째에서 봤을 때 fresh-time이고 i+1도 동일하기 때문이다. <br>
+  ![image](https://user-images.githubusercontent.com/37065429/142367690-e6a32728-f660-41c2-a1d1-ef71eb4fb985.png)
+- 즉, <span style="color:red">After each Tk, the fresh-start occurs</span> <br><span style="color:blue">
+  → Ti are i.i.d and ~Geom(p)</span>
+- i.i.d이기 때문에 다음도 도출할 수 있다. <br>
+  ![image](https://user-images.githubusercontent.com/37065429/142367891-5f7dcac9-6581-4499-9aec-e30393af10fb.png)
+- 근데 아직 distribution을 구하지는 않았다.
+
+<br>
+
+##### PMF of Yk
+
+![image](https://user-images.githubusercontent.com/37065429/142367690-e6a32728-f660-41c2-a1d1-ef71eb4fb985.png)
+
+- Ti는 또한 i.i.d 이고 Geom(p)이다.
+- 이제 PMF를 구해보자.<br>
+  ![image](https://user-images.githubusercontent.com/37065429/142368121-f748621b-5bf5-4594-91b5-7e6cf250f854.png)<br>→ k번째 도착했을 때의 시간이 t일 경우는 다음과 같이 계산이 된다. <br>
+  → 먼저, 시간 t에서 arrival이 있으면서(and) k-1번의 arrivals가 t-1동안 있어야 한다.<br>
+  → <span style="color:red">Fresh-start!!</span> 둘은 독립이다!!<br><br>
+
+#### Pascal Random Variable with Parameter (k, p)
+
+- 바로 앞 예제인 PMF of Yk에서 배운 방법이 pascal rv에 대한 내용이다.
+- 정의하자면 다음과 같다. <br>→ In the sequence of <span style="color:red">Bernoulli trials</span>, the time Yk of k-th success.
+- 식은 다음과 같다. parameter는 k와 p를 사용한다. <br>
+  ![image](https://user-images.githubusercontent.com/37065429/142369405-47f36c43-2a42-4275-bab7-2ed5f5eec3c1.png)
+- Pascal(1, p) = Geom(p) <br>
+  → 당연히, 첫번째에 대한 것은 Geom이다. <br>
 
