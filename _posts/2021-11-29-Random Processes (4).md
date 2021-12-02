@@ -312,7 +312,7 @@ toc_sticky: true
 ### Steady-state behavior : Why Important?
 
 - 새로운 Notation을 적용해서, <br>
-  ![IMG_2D42F9E7D28F-1](https://user-images.githubusercontent.com/37065429/144202315-aa5679d6-38ae-4be6-8482-f864e8687284.jpeg)<br>→ 다음과 같이 해보자.
+  ![IMG_2D42F9E7D28F-1](https://user-images.githubusercontent.com/37065429/144202315-aa5679d6-38ae-4be6-8482-f864e8687284.jpeg)<br>→ 다음과 같이 해보자. 이를 stationary probability라고 부른다.
 - 이를 사용한다면, MC를 오~랜 시간 진행시켰을 때, MC가 어떠한 최종 상태에 이르는 확률을 알 수 있다.
 - 직관적으로 Machine 예제를 또 가져와보자.<br>
   ![스크린샷 2021-12-01 오후 5 54 03](https://user-images.githubusercontent.com/37065429/144202579-d682b976-8055-4c4c-9b54-ff8c4dba8388.png)<br>
@@ -369,7 +369,202 @@ toc_sticky: true
 
 - Transition Probability Matrix가 다음과 같이 주어졌을 때, π1과 π2를 구해보자!<br>
   ![스크린샷 2021-12-01 오후 6 23 18](https://user-images.githubusercontent.com/37065429/144207324-55b9861c-fd5a-41f0-9d47-ec36e662df23.png)<br>
-  ![IMG_2CAF36226429-1](https://user-images.githubusercontent.com/37065429/144207954-4b2ae1d5-97e0-4836-b88d-374f91a01779.jpeg)
+  ![IMG_2CAF36226429-1](https://user-images.githubusercontent.com/37065429/144207954-4b2ae1d5-97e0-4836-b88d-374f91a01779.jpeg)<br>
+  <br>
+
+### Stationary Distribution
+
+- πj는 <span style="color:red">stationary distribution</span>로 불리기도 한다. 왜일까?<br>
+  → <span style="color:gray">Stationary : not moving or not intended to be moved.</span>
+  1. Distribution으로 부를 수 있는가?<br>![image](https://user-images.githubusercontent.com/37065429/144337560-147a3a6c-7348-439c-b0f0-f3c3b2f2a434.png)
+  2. Stationary라고 부를 수 있는가?<br>
+     ![image](https://user-images.githubusercontent.com/37065429/144337636-4d05fafb-81c6-4b7b-81e7-0eb0961e3982.png)<br>
+     → 원래는 출발점을 고려하지 않았지만, <span style="color:red">πj에 따라서</span> 출발 지점을 선택 했을 때는 위와 같은 결과가 나온다.<br><span style="color:gray">→ 나의 생각으로는 Long-term frequency interpretation에서 나온 것처럼 애초에 πj라는 것이 모든 경우를 포함하기 때문...?</span> 
+- 확장해서 다음과 같은 것을 알 수 있다.
+  1. ![image](https://user-images.githubusercontent.com/37065429/144338002-c426b688-f7d7-4a17-b415-fcca153e92bf.png)
+  2. ![image](https://user-images.githubusercontent.com/37065429/144338038-4f2b3792-7d77-41a8-9c69-32f01ef08737.png)
+- 그럼 이 좋은게 항상 모든 것에 적용이 가능할까?<br>
+  → 좋은 것은 그렇지 않다.
+  1. Only single recurrent class
+  2. Aperiodic
+
+<br>
+
+#### Example.
+
+- 한 사람은 우산을 두 개 가지고 있고, 집에서 사무실로 또 그 반대로 우산을 가지고 다닌다.
+
+- 만약 비가 내리고, 우산이 있다면 그 우산을 갖고 가지만, 비가 오지 않으면 우산을 그냥 내비 두고 간다.
+
+  1. 집 : 2 / 사무실 : 0<br>
+     → 출근(🌧) : 집 : 1 / 사무실 : 1<br>
+     → 출근(☀️) : 집 : 2 / 사무실 : 0<br>→ <span style="color:blue">퇴근(🌧) : 집 : 2 / 사무실 : 0</span><br>
+     → 퇴근(☀️) : 집 : 2 / 사무실 : 0<br>
+  2. 집 : 1 / 사무실 : 1<br>
+     → 출근(🌧) : 집 : 0 / 사무실 : 2<br>
+     → 출근(☀️) : 집 : 1 / 사무실 : 1<br>→ 퇴근(🌧) : 집 : 2 / 사무실 : 0<br>
+     → 퇴근(☀️) : 집 : 1 / 사무실 : 1<br>
+  3.  집 : 0 / 사무실 : 2<br>
+     → <span style="color:blue">출근(🌧) : 집 : 0 / 사무실 : 2</span><br>
+     → 출근(☀️) : 집 : 0 / 사무실 : 2<br>→ 퇴근(🌧) : 집 : 1 / 사무실 : 1<br>
+     → 퇴근(☀️) : 집 : 0 / 사무실 : 2<br>
+
+- 비가 올 확률은 p이다.
+
+- <span style="color:red">Q. </span>What is the steady-state probability that she gets wet during a commute?
+
+  - State space = {0, 1, 2} : i umbrellas available in location.<br>
+    → 즉, 상태의 변화는 출근 또는 퇴근이 된다.
+  - Transition diagram<br>
+    ![image](https://user-images.githubusercontent.com/37065429/144340096-b03c6892-67f9-473d-ada6-0ec0ab5c3b49.png)<br>
+    → 상태의 변화는 출근 또는 퇴근임을 기억하자. <br>
+    → 예시로, 0에서 2로 가는 것은 출근 때 집에 0개이지만 사무실에는 2개가 있으니 1의 확률이 된다.
+  - 이는 <span style="color:red">single recurrent class</span>이고 <span style="color:red">aperiodc(self-transition)</span>이므로 우리가 배운 내용을 모두 적용할 수 있다.
+  - Using Balance and Normalization equation.<br>
+    ![image](https://user-images.githubusercontent.com/37065429/144340341-ccf757ca-cdad-4370-be4f-4ca01151a669.png)<br>
+
+  <br>
 
 
 
+## Birth-Death Process
+
+### Example 1. Random Walk with Reflecting Barriers
+
+- 한 사람이 직선의 길을 걷고 있다고 해보자.
+- 그리고 이 사람은 각 slot time에서 오른쪽으로 갈 확률은 b, 왼쪽으로 갈 확률은 1-b라고 해보자.
+- 직선의 길이는 m이고 직선에서의 위치는 1, 2, ..., m으로 표현하고 그 중하나의 위치에서 시작한다.
+- <span style="color:orange">이 때, 0의 위치(1의 위치에서 왼쪽으로 또는 m의 위치에서 오른쪽)에 도착했을 때, 즉시 방향 전환하기 직전의 위치로 가게 된다.</span>
+- <span style="color:red">Q. </span>이 때의 Transition Diagram은?<br>
+  ![image](https://user-images.githubusercontent.com/37065429/144341872-7ac7be0a-0ca2-497e-87df-4a1410e3ca0c.png)<br>
+  <br>
+
+### Example 2. Queueing
+
+- 손님이 슈퍼 마켓에서 계산을 위해 카운터로 간다.
+- 카운터에 줄을 설 수 있는 최대 인원 수는 m이고, 앞선 손님이 있고 m이 아니라면 기다리게 된다.
+- 이러한 condition에서는 3가지의 상황이 발생할 수 있다.
+  1. 새로운 손님이 b의 확률로 도착
+  2. 이미 줄에 있던 사람이 d의 확률로 떠남(계산 또는 다른 물건을 가지러)
+  3. 줄에 1-b-d의 확률로 그 누구도 새로 오지 않고 떠나지 않음
+
+- <span style="color:red">Q. </span>이 때의 Transition Diagram은?<br>![image](https://user-images.githubusercontent.com/37065429/144342198-9f47846b-3269-4b65-bfc1-f38f17a4483a.png)<br>
+
+<br>
+
+### Birth-Death Process
+
+- 앞서 본 두 예제의 공통점이 무엇일까?<br>
+  → 바로 근처의 이웃과만 transition이 발생한다는 것이다.
+
+- 이러한 Markov chain을 <span style="color:red">Birth-death process</span>라고 부른다.
+
+  1. Linearly arranged
+  2. Transition only occur to a neighboring state
+
+- State Diagram of Birth-Death Process<br>
+
+  ![스크린샷 2021-12-02 오후 2 49 18](https://user-images.githubusercontent.com/37065429/144365269-6b2c175c-e1c9-4acd-bba0-53b88aa7c659.png)<br>
+  → 앞서 다룬, Random Walk와 Queueing은 Birth-Death Process의 특이 케이스 중 하나이다.
+
+- Balance Equation.
+
+  - at state 0.<br>![스크린샷 2021-12-02 오후 2 56 04](https://user-images.githubusercontent.com/37065429/144365966-60f94c66-2f52-4025-aa64-197a2002abb8.png)
+
+  - at state 1.<br>
+    ![스크린샷 2021-12-02 오후 2 56 24](https://user-images.githubusercontent.com/37065429/144365999-ec192690-41eb-4c10-abd5-49dcd903cdfe.png)
+
+  - General.<br>
+    ![스크린샷 2021-12-02 오후 2 56 44](https://user-images.githubusercontent.com/37065429/144366032-e3861985-5cba-4d04-8c7c-40a20a514642.png)
+
+  - 이 식으로부터 우리가 유추할 수 있는 것은 <span style="color:red">state n의 관점에서</span> <span style="color:orange">dn, bn의 frequency</span>는 동일하다는 것이다.<br>
+    → 따라서, Birth-Death Process에서는 이를 <span style="color:red">**Local balance equation**</span>이라고 한다.
+
+  - 특이한 Balance Eqn.을 갖고 있기 때문에 stationary probability를 구하는 것도 간단하게 할 수 있다.<br>![스크린샷 2021-12-02 오후 3 02 12](https://user-images.githubusercontent.com/37065429/144366601-dc98f0b9-ef94-4520-8783-b6afaa322267.png)<br>
+
+    → 추가로, 당연히 ![스크린샷 2021-12-02 오후 3 02 39](https://user-images.githubusercontent.com/37065429/144366654-dfcdd221-1861-4d20-8e51-77468464fb8b.png)<br>
+
+  <br>
+
+## Transient behaviors
+
+### Motivating Questions
+
+- 이 전까지는 Steady-state behavior에 대해서 공부를 했었다. <br>
+  → 하나의 recurrent class 🏝
+- 이제는 더 확장된, 그리고 일반적인 MC에 대해서 생각해보자. <br>
+  → A MC with <span style="color:orange">multiple recurrent class and a set of transient states T</span>.
+- 여기서 그럼 하나의 가정을 진행해야 한다. <br>
+  → 이 MC가 어디서 시작해야될까?
+  1. Recurrent class<br>
+     → 한 번 빠지면 헤어나올 수 없다. (탈모)
+  2. <span style="color:orange">Transient state </span><br>
+     → 그러면 언젠가는 Recurrent class로 진입하게 될 것이고, 거기서 재밌게 놀 것이다.
+- 그래서 우리는 일반적인 MC에서 이러한 질문을 던질 수 있다.<br>
+  → <span style="color:red">Q. </span><span style="color:orange">Transient Behavior</span> : What is the <span style="color:orange">first recurrent state to be entered</span> as well as <span style="color:orange">time until this happens</span>?<br>
+
+<br>
+
+### Special case : Every Recurrent State is Absorbing
+
+- General한 형태를 다루기 전에, 특이한 케이스를 하나 살펴보자.<br>
+  →<span style="color:blue"> Every recurrent state is absorbing</span>
+
+- <span style="color:red">Definition. </span>A state k is <span style="color:blue">absorbing</span>, if p(kk) = 1, and pky = 0 for all j != k.<br>
+  ![스크린샷 2021-12-02 오후 3 45 39](https://user-images.githubusercontent.com/37065429/144371706-0335aa96-5aed-446b-a02d-26185c2421dc.png)<br>
+  → 여기서는 1과 6이 해당된다.
+
+- For a given absorbing state s, the probability ai = ai(s) of reaching s, starting from a state i?<br>
+  → i : starting point<br>
+  → s : End point, absorbing state<br>
+
+- S = 6으로 고정시켰을 때, <br>
+  ![스크린샷 2021-12-02 오후 3 50 50](https://user-images.githubusercontent.com/37065429/144372347-a13c9bf1-e1f1-45a1-814f-43276d09eccb.png)<br>
+   → <span style="color:gray">(s는 생략)</span> 위 그림에서 각각의 ai의 확률은 위와 같다.<br>
+  ![스크린샷 2021-12-02 오후 3 53 08](https://user-images.githubusercontent.com/37065429/144372609-c98c278f-4427-4112-a1c2-f3455ac31010.png)<br>→ a2(1) = 1 / a2(6)가 된다. 1로 가려면 2를 무조건 거쳐야 하고, <br>
+
+  → 6이 absorbing한 것처럼 1도 absorbing하기 때문.<br>
+
+<br>
+
+### For General MCs
+
+- 다음 그림을 봐 보자.<br>![IMG_1ABD6BCF9224-1](https://user-images.githubusercontent.com/37065429/144379214-b2866610-9d17-4b99-b38e-a76180bab6a9.jpeg)
+
+  1. {1}과 {4, 5}는 Recurrent class로서 한 번 들어오면 다시는 나갈 수 없는 구조이다.
+
+  2. 그럼 여기서 질문.<br>
+
+     → Probability that the state eventually enters the recurrent class {4, 5}?
+
+- {4, 5}는 들어가는 순간 나올 수 없기 때문에, 단순히 그 '섬'으로 들어갈 확률을 구하는 문제이다.
+
+- 그럼, {4, 5}를 하나의 섬, 즉 {6}으로 치환해도 별 다를 것이 없는 문제가 된다. <br>
+  ![스크린샷 2021-12-02 오후 4 48 12](https://user-images.githubusercontent.com/37065429/144379637-d933608e-cb04-4f75-978e-842db560a421.png)<br>
+  → 문제에 대한 정답? 우린 이미 구했다. 위를 보자!<br>
+
+<br>
+
+#### Expected Time to Any Recurrent State
+
+- <span style="color:red">Question. </span>Starting from a <span style="color:orange">transient state i</span>, what is the <span style="color:orange">expected number of steps until a recurrent state is entered</span>(which we call <span style="color:orange">absorption</span>)?
+
+  - Special case when all recurrent states are absorbing<br>
+    ![스크린샷 2021-12-02 오후 5 01 40](https://user-images.githubusercontent.com/37065429/144381445-9f75809b-9ba9-48d3-8ee1-d6866367b88e.png)<br>
+    → Spider-Fly!
+  - μi를 새롭게 정의해서, <br>
+    ![스크린샷 2021-12-02 오후 5 02 23](https://user-images.githubusercontent.com/37065429/144381555-b5a4818a-ffb5-4dd2-9fe9-ada5c167f519.png)
+  - 그럼 문제에 대한 정답은 다음과 같다.<br>
+    ![스크린샷 2021-12-02 오후 5 02 52](https://user-images.githubusercontent.com/37065429/144381625-1e89d15c-1183-439d-86fb-b461b0787650.png)<br>
+
+  <br>
+
+#### Expected Time to a Particular Recurrent State s
+
+- 풀이의 용이성을 위해 Single recurrent class를 생각하자.
+- 우리는 두 개의 질문을 할 것이다.<br>
+  <span style="color:red">Q1. </span>**Mean first passage time.** Starting from i, <span style="color:blue">expected number of transitions to ti</span> to reach s for the first time.<br><span style="color:red">Q2. </span>**Mean first recurrence time.** Starting from s, <span style="color:blue">expected number of transitions to ts*</span> to reach s for the first time.
+- 가정하는 MC는 다음과 같다.<br>
+  ![스크린샷 2021-12-02 오후 8 51 55](https://user-images.githubusercontent.com/37065429/144416877-3cad1b10-72fc-42be-9f3f-01279e08ba4a.png)
+- 풀이는 다음과 같다.<br>![IMG_B2B85526A866-1](https://user-images.githubusercontent.com/37065429/144416597-cd7e099c-e08f-477b-a252-45b9a2d8bbe2.jpeg)<br>
+  → 1-2와 2-2는 내가 풀어서 넣었다. 틀릴 수도 있당.
