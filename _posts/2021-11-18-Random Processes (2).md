@@ -7,17 +7,15 @@ toc: true
 toc_sticky: true
 ---
 
-
-
 # Random Processes (2)
 
-*뿌아송~*
+## Poisson Processes : Poisson RV and Basic Idea
+
+<br>*뿌아송~*
 
 - 오늘 배울 것은 Poisson process로 BP에서 Continous한 상황을 생각한 방식이다.
 
-<br>
 
-## Poisson Processes : Poisson RV and Basic Idea
 
 ### Background : Poisson rv X with parameter λ (1)
 
