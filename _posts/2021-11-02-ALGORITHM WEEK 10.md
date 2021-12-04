@@ -110,3 +110,7 @@ Kruskal(G, r)
 → Prim Algorithm과 같다. <br>
 → Relaxation 부분이 다르다! <br>
 <br>
+
+
+
+![IMG_86EF60E2BA3E-1](https://user-images.githubusercontent.com/37065429/144714661-8456df24-3f23-423c-bc44-0aece64f0334.jpeg)
