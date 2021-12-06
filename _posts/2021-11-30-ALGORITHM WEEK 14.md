@@ -132,8 +132,11 @@ toc_sticky: true
 - 더블 해싱<br><img width="425" alt="스크린샷 2021-11-30 오전 11 44 30" src="https://user-images.githubusercontent.com/37065429/143976460-8b58f3d9-35ad-47fe-a1ff-76a4aad0c165.png">
 
   - 두 개의 해시 함수를 사용하여 해싱하는 방법
+
+- Open Addressing의 문제점
+
   - 키를 삭제할 경우 문제가 발생할 수 있음
-  - A2, B2, C2가 순서대로 모두 동일한 해시 값을 갖는다고 하면, 삽입에는 문제가 없음
+  - A2, B2, C2가 순서대로 모두 동일한 해시 값을 갖는다고 하면, 연산에는 문제가 없음
   - 이 중 B2를 삭제하고 나면, 이후 C2를 찾을 때 문제가 발생할 수 있음(원래는 연속이여야 하지만 삭제로 인해 아니기 때문)<br>
     <img width="688" alt="스크린샷 2021-11-30 오전 11 46 49" src="https://user-images.githubusercontent.com/37065429/143976717-fac51bc8-201b-4c9c-8623-94ed4725edf4.png">
 
