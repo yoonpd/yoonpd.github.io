@@ -1,4 +1,5 @@
 ---
+
 title: "Convex Optimization (1)"
 
 categories:
@@ -80,9 +81,47 @@ toc_sticky: true
 
 ### Affine Hull
 
-- 어떤 집합 <span style="color:blue">C</span>에 속해 있는 모든 점들에 대해 모든 조합 가능한 Affine combination을 적용한다면, 그것을 <span style="color:blue">Affine hull of C</span>라고 한다.
+- 어떤 집합 <span style="color:blue">C</span>에 속해 있는 모든 점들에 대해 모든 조합 가능한 Affine combination을 적용한다면, 그것을 <span style="color:blue">Affine hull of C</span>라고 한다.<br>
+  <img width="337" alt="스크린샷 2022-01-31 오후 8 46 34" src="https://user-images.githubusercontent.com/37065429/151788444-4bc249df-7765-4d5e-a8d8-a608c159c3a3.png">
 
 <br>
 
+## Convex Set
 
+### Definition
 
+- Affine과 매우매우 유사하다.
+- 정의는 다음과 같이 할 수 있다.<br>
+  → 어떤 집합 <span style="color:blue">C</span>의 두 점 x와 y가 있을 때, 두 점을 이은 <span style="color:blue">선분</span>이 다시 집합 <span style="color:blue">C</span>에 속하게 된다면, 집합 <span style="color:blue">C</span>를 <span style="color:blue">Convex Set</span>이라고 한다.<br>
+  → Affine set의 정의에서 직선이 선분이 됐음을 인지하자.
+- 직관적으로 이해하기 위해 다음과 같은 그림을 생각해보자.<br>
+  ![image](https://user-images.githubusercontent.com/37065429/151788764-f654545d-18d0-4ed3-aa45-4a88026ee2a6.png)
+  → 육각형은 어떠한 선분을 만들었을 때, 그 선분이 다시 육각형에 속함을 알 수 있다.<br>
+  → 달 모양의 경우, 파여있는 부분이 있기 때문에 어떤 선분은 다시 속하지 않음을 알 수 있다.<br>
+
+<br>
+
+### Convex Combination
+
+- 선분의 수학적 정의에 따르면, 각 계수의 합은 1이 되면서 각 계수가 [0, 1]의 범위에 있다는 것을 알 수 있다.
+- 이를 활용해서, 다음과 같이 Convex Combination을 정의할 수 있다. <br>
+  → 어떤 집합에 속해 있는 점들에 대해 Linear combination을 진행하되, 각 계수의 합이 1이 되고 각 계수가 [0, 1]의 범위를 갖도록 한다면 이를 <span style="color:blue">Convex combination</span>이라고 한다.<br>
+  <img width="315" alt="스크린샷 2022-01-31 오후 8 54 21" src="https://user-images.githubusercontent.com/37065429/151789459-cfd81506-4368-492b-aec6-b3a7787cb0c4.png"><br><br>
+
+### Convex Hull
+
+- 어떤 집합 <span style="color:blue">C</span>에 속해 있는 모든 점들에 대해 모든 조합 가능한 Convex combination을 적용한다면, 그것을 <span style="color:blue">Convex hull of C</span>라고 한다.<br><img width="488" alt="스크린샷 2022-01-31 오후 8 55 30" src="https://user-images.githubusercontent.com/37065429/151789603-213cf8fd-d2ba-4ce1-9543-b18581f45499.png"><br>
+  1. 왼쪽의 그림을 보면 검은 색 점들만 있는 것이 원래 집합 <span style="color:blue">C</span>라고 한다면, 각 점들에 대해 모든 조합 가능한 Convex combination을 진행한다면 음영처리된 5각형이 나올 것이다.
+  2. 오른쪽의 그림을 보면 고인돌(?) 모습이 원래 집합 <span style="color:blue">C</span>라고 한다면, 각 점들에 대해 모든 조합 가능한 Convex combination을 진행한다면 둥그런 모습이 나올 것이다.
+  3. <span style="color:red">따라서, Convex set이 아닌 집합에 대해 모든 조합 가능한 convex combination을 진행한다면, convex hull of C는 **항상 convex set**이 되게 된다.</span><br>
+     → 이는 이전에 나온 Affine hull에 대해서도 적용된다. <br>
+
+<br>
+
+## Cone
+
+- 정의는 다음과 같이 할 수 있다.<br>
+  → 어떤 집합 <span style="color:blue">C</span>의 두 점 x와 y가 있을 때, 두 점을 이은 <span style="color:blue">반직선</span>이 다시 집합 <span style="color:blue">C</span>에 속하게 된다면, 집합 <span style="color:blue">C</span>를 <span style="color:blue">Cone Set</span>이라고 한다.
+- 수학적으로는 아주 간단하게 정의될 수 있다.<br>
+  <img width="132" alt="스크린샷 2022-01-31 오후 9 12 58" src="https://user-images.githubusercontent.com/37065429/151791890-1e015fed-c2ce-46d6-bc6b-8dbc78fe8911.png">
+- Convex cone에 대해서는 다음 포스트에서 다루겠다.
