@@ -8,6 +8,8 @@ main:
     url: /categories/Probability and Random Variables/
   - title: "Convex Optimization"
     url: /categories/Convex Optimization/
+  - title: "Lyapunov Optimization"
+    url: /categories/Lyapunov Optimization/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
