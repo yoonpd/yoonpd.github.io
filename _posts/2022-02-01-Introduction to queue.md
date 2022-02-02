@@ -7,6 +7,9 @@ toc: true
 toc_sticky: true
 ---
 
+>![image](https://user-images.githubusercontent.com/37065429/152164119-ec0d663b-3d7c-4ced-bdbb-3ed8211600f2.png)<br>Lyapunov Optimization은 위 책을 참고하여 정리 되었습니다.<br>
+>혼자 공부하면서 쓴 내용이기 때문에 잘못된 내용이 있을 수도 있습니다...개강하면 수정할게요...
+
 # Introduction Queue
 
 - 이 포스트는 동적 최적화의 기법 중 하나인 Lyapunov 최적화 기법에 대해 다룬다.
@@ -68,7 +71,7 @@ toc_sticky: true
 
 <br>
 
-# Example
+# Example - No observation.
 
 - 야무진 예제를 살펴보자.<br><img width="214" alt="스크린샷 2022-02-01 오후 10 38 12" src="https://user-images.githubusercontent.com/37065429/151978426-c14888d7-08ef-4a32-b0e5-ed6e387bdf41.png">
   1. 모든 패킷은 고정된 길이를 갖고 각 Queue에 입력으로 들어온다.
@@ -95,5 +98,25 @@ toc_sticky: true
   2. **b2** : 두 개의 choice에서 0.5의 확률만을 가지니, **b2 = 0.5**
   3. **b3** : 두 개의 choice에서 모두 있으니, **b3 = 1**
 - 자, 수렴 값을 모두 찾았으니 이제 rate stable한지 확인을 해보면, <br><img width="187" alt="스크린샷 2022-02-01 오후 10 53 38" src="https://user-images.githubusercontent.com/37065429/151981081-0580ca3b-4b7f-472c-b8dc-e2a17a7bf499.png"><br>→ 모두 만족하는 것을 알 수 있다!<br>
-  → <span style="color:red">따라서, 위와 같이 확률적 모델링을 한 네트워크 환경은 rate stable하다.</span>
+  → <span style="color:red">따라서, 위와 같이 확률적 모델링을 한 네트워크 환경은 rate stable하다.</span><br>
+
+<br>
+
+# Example - Observation
+
+- 또 야무진 예제를 하나 보자.<br>
+  ![image-20220202222545898](/Users/yunpildo/Library/Application Support/typora-user-images/image-20220202222545898.png)
+
+  1. a1과 a2는 매 timeslot에서 유입되는 패킷의 양이다. i.i.d.이고, 각각의 expectation은 <br><img width="250" alt="스크린샷 2022-02-02 오후 10 26 38" src="https://user-images.githubusercontent.com/37065429/152162622-97a7ceef-99f1-4dde-9574-b196f560cc7f.png">
+
+  2. **S**는 channel state vector로서, network controller가 매 timeslot의 시작 부분에서 확인하는 값이다.<br><img width="632" alt="스크린샷 2022-02-02 오후 10 27 42" src="https://user-images.githubusercontent.com/37065429/152162815-25945628-a270-4ea0-8731-bf95b563ead6.png"><br>
+
+     → 네 개의 경우의 수가 존재하고, 채널이 모두 ON일 때 어떤 채널을 선택해야할지 골라야한다.
+
+- 먼저, 각 lambda 값에 대한 boundary는 다음과 같이 정의될 수 있다.<br><img width="293" alt="스크린샷 2022-02-02 오후 10 29 24" src="https://user-images.githubusercontent.com/37065429/152163075-5612e62d-bf44-40c6-ad84-840b9ffe923a.png">
+
+- 이를 만족할 수 있는 여러 lambda 값이 존재할 수 있고, 앞서 정의된 p_xx의 확률 값을 (0.24, 0.36, 0.16, 0.24)로 가정한다면<br><img width="621" alt="스크린샷 2022-02-02 오후 10 30 54" src="https://user-images.githubusercontent.com/37065429/152163293-9224066f-237a-4edf-8a49-96088c56db1d.png"><br>→ 가능한 lambda의 영역은 위 그래프와 같이 만들어질 수 있다. 이를 <span style="color:orange">Network capacity region</span>이라고 한다.
+
+- Q. 만약 **LAMBDA**=(0.5, 0.26)이라고 한다면, 1번 채널이 선택될 확률이 몇이 되어야 할까?<br><img width="544" alt="스크린샷 2022-02-02 오후 10 33 07" src="https://user-images.githubusercontent.com/37065429/152163604-97eb8e3b-c6ba-4d49-975b-b037eded2ecf.png"><br>→ 여러 beta 값이 rate stability를 만족시키면서 선택될 수 있겠지만, 예시로 0.14/0.24도 설정될 수 있다.
+  
 

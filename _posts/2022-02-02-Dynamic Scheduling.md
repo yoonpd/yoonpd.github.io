@@ -7,6 +7,9 @@ toc: true
 toc_sticky: true
 ---
 
+![image](https://user-images.githubusercontent.com/37065429/152164119-ec0d663b-3d7c-4ced-bdbb-3ed8211600f2.png)<br>Lyapunov Optimization은 위 책을 참고하여 정리 되었습니다.<br>
+혼자 공부하면서 쓴 내용이기 때문에 잘못된 내용이 있을 수도 있습니다...개강하면 수정할게요...
+
 # Dynamic Scheduling
 
 - Dynamic scheduling은 후에 서술될 *Lyapunov Drift 와 Lyapunov optimization*으로부터 개발된 알고리즘이라고 할 수 있다.
