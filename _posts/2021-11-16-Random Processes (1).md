@@ -9,6 +9,8 @@ toc_sticky: true
 
 # Random Processes (1)
 
+> 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
+
 - 드디어 새로운 목차다.
 - Random Process는 머신러닝, 통신 시스템 등에서 아주아주 많이 쓰이는 개념이라고 한다.
 
@@ -225,3 +227,4 @@ toc_sticky: true
 - Pascal(1, p) = Geom(p) <br>
   → 당연히, 첫번째에 대한 것은 Geom이다. <br>
 
+<br>

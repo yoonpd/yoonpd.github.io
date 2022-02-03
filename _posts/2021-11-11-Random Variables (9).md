@@ -9,6 +9,8 @@ toc_sticky: true
 
 # Random Variable (9)
 
+> 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
+
 ## Weak Law of Large Numbers : Proof
 
 - WLLN을 증명하기 위해서 Inequality에 관한 두 가지 증명을 알아야 한다.

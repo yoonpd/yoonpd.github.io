@@ -11,6 +11,8 @@ toc_sticky: true
 
 # Radnom Variable (7)
 
+> 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
+
 # <br>
 
 ## Conditional Expectation and law of iterative expectation

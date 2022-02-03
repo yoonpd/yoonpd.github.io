@@ -7,7 +7,11 @@ toc: true
 toc_sticky: true
 ---
 
+> 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
+
 # Random Processes (4)
+
+
 
 - 지금까지 Bern, Poisson Process에 대해서 배웠다.
 - 또 하나의 중요하고 유명한 Markov Chain을 이번 정리해서 해보겠다.

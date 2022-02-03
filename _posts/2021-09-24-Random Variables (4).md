@@ -7,6 +7,8 @@ categories:
 
 # Random Variables (4)
 
+> 현재 정리하는 내용은 KAIST EE의 이융 교수님, Probability and Intorductory Random Process 강의를 참고하여 작성했습니다.
+
 ## Continuous Random Variable and PDF (Probability Density Function)
 
 - **일상에서 많은 RV는 보통 continuous values를 갖고 있음** <br/>
