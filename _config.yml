@@ -20,7 +20,7 @@ title                    : "TheBestEverInTheUniverse"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Yoon Pil-Do"
-description              : "공부했던 것들, 참고할 것들을 정리하는 블로그입니다."
+description              : "틀리면 알려주쇼.."
 url                      : "https://yoonpd.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -104,7 +104,7 @@ author:
   name             : "Yoon Pil-do"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "I am **The BEST**."
-  location         : "Korea, Daejeon"
+  location         : "Korea, Daegu, DGIST"
   email            : "yoonpd56@gmail.com"
   links:
     - label: "Email"
