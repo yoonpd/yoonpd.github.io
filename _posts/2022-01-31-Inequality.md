@@ -7,6 +7,11 @@ toc: true
 toc_sticky: true
 ---
 
+><img width="170" alt="스크린샷 2022-02-03 오후 12 51 44" src="https://user-images.githubusercontent.com/37065429/152278442-3259d054-5ae5-4754-ac20-4eb90dbd8ed1.png"><br>
+>Convex Optimization 포스트는 위 책을 참고해서 작성했습니다.<br>
+>이 외에도 참고한 사이트는 다음과 같습니다. <br>저한테는 어려워서 이해한 만큼만 작성했습니다....<br>
+>https://convex-optimization-for-all.github.io/ (모두를 위한 컨벡스 최적화)
+
 # Generalized Inequality
 
 - 우리는 정수 1과 2 중 누가 큰지 알고 있다.<span style="color:gray">*1인가?*</span>
