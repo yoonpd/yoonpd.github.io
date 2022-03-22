@@ -1,5 +1,5 @@
 ---
-title: "Dynamic scheduling"
+title: "Introduction to Lyapunov"
 
 categories:
   - Lyapunov Optimization
